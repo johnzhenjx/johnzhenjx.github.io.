@@ -30,10 +30,10 @@ var textArray = [
   "Student & developer",
 	"Probably retarded", 
   "Learning front-end",
-	"Not a sex offender", 
+	"Scary hackerman!!", 
 	"Certified chink", 
   "习近平的孙子",
-  "Had good relations with your mother", 
+  "Not a sex offender", 
 ];
 
 var typingspeed = 100;
