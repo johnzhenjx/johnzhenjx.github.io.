@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: consolas, sans-serif;
+    color: #e4e3e3;
+    overflow: hidden; 
+}
+
+body {
+  background-color: black;
+}
+
+#playpause {
+		position: absolute;
+		background-color: transparent;
+    cursor: pointer;
+		color: #e4e3e3;
+    z-index: 100;
+    left: 5px;
+    top: 5px;
+	}
+
+.title {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.container {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.forward:before {
+  content: "\f04e";
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.typing {
+  position: relative;
+  bottom: 17px;
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 1px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 2px;
+	height: 16px;
+	background-color:#e4e3e3;
+	animation: blink .60s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: #e4e3e3; 
+	}
+}
+
+.links {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  text-align: center;
+  z-index: 3;
+}
+
+#tag {
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+
+
+.overlay {
+  z-index: 1000;
+  background-color: black;
+  background: #000; 
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0; 
+  position: fixed; 
+}
+
+#clicktoenter {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+}
+
+.overlay label {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vw;
+}
+.no-hover {
+  display: block;
+}
+.hover {
+  display: none;
+}
+
+#overlay-toggle {
+  position:absolute;
+  display: none;
+}
+
+  #overlay-toggle:checked ~ .overlay {
+  animation-fill-mode: forwards;
+  animation-name: fade, hide;
+  animation-delay: 0s, 600ms;
+  animation-duration: 600ms, 1ms;
+}
+#overlay-toggle:checked ~ .overlay label {
+  animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-delay: 0s;
+  animation-duration: 500ms;
+}
+@media(hover: hover) {
+  .hover {
+    display: block;
+  }
+  .no-hover {
+    display: none;
+  }
+}
+@keyframes fade{
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  to {
+    visibility: hidden;
+  }
+}
+
+canvas { 
+  display: block; 
+}
+
+.waves { 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  z-index: 1;
+}

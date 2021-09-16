@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>zhxn</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+  </head>
+  <body>
+    <audio loop preload="auto" id="audio">
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div class="overlay">
+      <label for="overlay-toggle" onclick="audioPlay();startTyping();">
+        <p id="clicktoenter">click to enter</p>
+        <span class="hover"></span>
+      </label>
+    </div>
+    
+    <div class="container">
+      <h1 class="title">
+        zhxn.xyz
+      </h1>
+      <div class="typing">
+        <div id="text"></div>
+        <div id="cursor"></div>
+      </div>
+    </div>
+    <div class="links">
+      <p><a href="https://discord.gg/c5FwTBPSvr" target="_blank">discord</a> / <a href="mailto: johnzhenjx@outlook.com">email</a> / <a href="https://osu.ppy.sh/users/18020449" target="_blank">osu</a></p>
+    </div> 
+    <p id="tag">© zhxn#0001</p>
+
+    <i id="playpause" onclick="togglepause(this)" class="fa fa-volume"></i>
+    <div class="waves"></div>
+    <script src="ShaderProgram.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
