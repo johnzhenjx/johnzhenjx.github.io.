@@ -29,7 +29,7 @@ function togglepause(x) {
 var textArray = [
   "Student & developer",
 	"Probably retarded", 
-  "Learning front-end",
+  "Learning full stack",
 	"Scary hackerman!!", 
 	"Certified chink", 
   "习近平的孙子",
